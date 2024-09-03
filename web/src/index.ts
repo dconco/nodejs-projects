@@ -7,7 +7,7 @@ const port: number = 3000
 const server = createServer((req: IncomingMessage, res: ServerResponse) => {
 	let uri = url.parse(req?.url ?? '/')
 	let uriParam = new URLSearchParams(uri?.query ?? '/')
-let uriQuery = uriParam.get('username')
+	let uriQuery = uriParam.get('username')
 
 	res.setHeader('Content-Type', 'text/html')
 
